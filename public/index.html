@@ -1,12 +1,79 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Rock</title>
+        <title>RPS(LS)</title>
         <!-- Link to your script file(s) and CSS in here somewhere -->
+        <script src="scripts.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
     </head>
     <body>
 
     <!-- Your interface markup goes here -->
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
+
+    <h1>Welcome to a Game of Rock Paper Scissors (Lizard-Spock)</h1>
+
+    <button id="show_rules" type="button">Show Rules</button>
+
+    <div id="how_to_play" class="modal">
+        <div class="modal-content">
+            <span id="close_rules" class="close">&times;</span>
+            <h3>Rules for Rock Paper Scissors:</h3>
+            <p>- Scissors CUTS Paper</p>
+            <p>- Paper COVERS Rock</p>
+            <p>- Rock CRUSHES Scissors</p>
+            <br>
+            <h3>Rules for the Lizard-Spock Espansion of Rock Paper Scissors:</h3>
+            <p>- Scissors CUTS Paper</p>
+            <p>- Paper COVERS Rock</p>
+            <p>- Rock SMOOSHES Lizard</p>
+            <p>- Lizard POISONS Spock</p>
+            <p>- Spock SMASHES Scissors</p>
+            <p>- Scissors DECAPITATES Lizard</p>
+            <p>- Lizard EATS Paper</p>
+            <p>- Paper DISPROVES Spock</p>
+            <p>- Spock VAPORIZES Rock</p>
+            <p>- Rock CRUSHES Scissors</p>
+        </div>
+    </div>
+
+    <form id="form">
+        <input type="radio" id="rps" name="game_type" value="rps">
+        <label for="rps">Play RPS</label><br>
+        <input type="radio" id="rpsls" name="game_type" value="rpsls">
+        <label for="rpsls">Play RPSLS</label><br>
+
+        <div id="play_form" hidden>
+            <input type="radio" id="random" name="playstyle" value="random">
+            <label for="random">Play with a random option</label><br>
+            <input type="radio" id="opponent" name="playstyle" value="opponent">
+            <label for="opponent">Play with a specific option</label><br>
+            <br>
+            <div id="opponent_options" hidden>
+                <input type="radio" id="rock" name="player_option" value="rock">
+                <label for="rock">Rock</label><br>
+                <input type="radio" id="paper" name="player_option" value="paper">
+                <label for="paper">Paper</label><br>
+                <input type="radio" id="scissors" name="player_option" value="scissors">
+                <label for="scissors">Scissors</label><br>
+                <div id="extra_options" hidden>
+                    <input type="radio" id="lizard" name="player_option" value="lizard">
+                    <label for="lizard">Lizard</label><br>
+                    <input type="radio" id="spock" name="player_option" value="spock">
+                    <label for="spock">Spock</label><br>
+                </div>
+                <button type="button" id="opponent_submit">Play move</button>
+            </div>
+            <div id="random_options" hidden>
+                <button type="button" id="random_submit">Play a random move</button>
+            </div>
+        </div>
+        <button type="reset" id="reset">Reset</button>
+        <button type="submit" hidden>Submit</button>
+    </form>
+
+    <h2 id="status_message">Let's play Rock Paper Scissors (LS)!</h2>
 
     </body>
 </html>
