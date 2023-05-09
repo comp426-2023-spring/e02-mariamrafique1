@@ -41,6 +41,7 @@ button {
 }
 
 .close:hover,
+
 .close:focus {
   text-decoration: none;
   cursor: pointer;
