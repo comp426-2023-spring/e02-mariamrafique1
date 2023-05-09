@@ -27,10 +27,10 @@ button {
 
 .modal-content {
   background-color: #2e2e2e;
-  margin: 2% auto; /* 15% from the top and centered */
+  margin: 2% auto; 
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%; 
 }
 
 .close {
@@ -41,7 +41,6 @@ button {
 }
 
 .close:hover,
-
 .close:focus {
   text-decoration: none;
   cursor: pointer;
